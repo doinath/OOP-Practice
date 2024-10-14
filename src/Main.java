@@ -9,5 +9,8 @@ public class Main {
 
         System.out.print(choice);
         System.out.print("sda");
+
+        System.out.print("ice cream yummy");
+        System.out.print("dsda");
     }
 }
