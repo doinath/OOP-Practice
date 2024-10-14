@@ -7,5 +7,6 @@ public class Main {
         System.out.print("Hello @User!");
         var choice = sc.next().charAt(0);
 
+
     }
 }
