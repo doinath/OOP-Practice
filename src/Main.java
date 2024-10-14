@@ -8,5 +8,6 @@ public class Main {
         var choice = sc.next().charAt(0);
 
         System.out.print(choice);
+        System.out.print("sda");
     }
 }
