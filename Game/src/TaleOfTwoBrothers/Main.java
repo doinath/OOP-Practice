@@ -1,4 +1,6 @@
 package TaleOfTwoBrothers;
+import TaleOfTwoBrothers.Characters.*;
+//import TaleOfTwoBrothers.BattleSystem.*;
 
 public class Main {
     public static void main(String[] args) {
