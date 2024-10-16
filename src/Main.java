@@ -6,12 +6,9 @@ interface attack {
     int skill(String skillName, int damage);
 }
 
-interface state {
-    boolean isAlive();
-}
-
-
-
+//interface state {
+//    boolean isAlive();
+//}
 
 abstract class Character {
     public String name;
@@ -27,9 +24,9 @@ abstract class Character {
 }
 
 class Hakobe extends Character implements attack {
-    private final String name;
-    private int hitPoints;
-    private int manaPoints;
+//    private final String name;
+//    private int hitPoints;
+//    private int manaPoints;
 
     public Hakobe() {
         name = "Hakobe";
@@ -54,9 +51,9 @@ class Hakobe extends Character implements attack {
 }
 
 class Boss extends Character implements attack {
-    private final String name;
-    private int hitPoints;
-    private int manaPoints;
+//    private final String name;
+//    private int hitPoints;
+//    private int manaPoints;
 
     public Boss() {
         //super("Boss", 100, 100);
@@ -69,14 +66,18 @@ class Boss extends Character implements attack {
         return damage > 0;
     }
 
-    public String getName() {
-        return name;
-    }
+//    public String getName() {
+//        return name;
+//    }
     public void bossHealth(int damage) {
         if(takenDamage(damage)) {
-            System.out.println(getName() + " has taken " + damage + " damage");
+            System.out.println(name + " has taken " + damage + " damage");
             this.hitPoints -= damage;
         }
+    }
+
+    public int checkHealth() {
+        return hitPoints;
     }
 
     @Override
@@ -94,13 +95,12 @@ class Boss extends Character implements attack {
 public class Main {
     public static void main(String[] args) {
     //Scanner sc = new Scanner(System.in);
-
     //Character c = new Character();
 
     Hakobe h = new Hakobe();
     Boss b = new Boss();
 
-    b.bossHealth(h.basic_attack(100));
-
+    b.bossHealth(h.basic_attack(50));
+    System.out.println(b.checkHealth());
     }
 }
